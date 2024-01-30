@@ -7,7 +7,7 @@ def get_ordered_files(dir_name):
     list_of_files = filter(os.path.isfile, glob.glob(dir_name + '/*'))
 
     # Sort list of files based on creation time in ascending order
-    list_of_files = sorted(list_of_files, key=os.path.getctime)
+    list_of_files = sorted(list_of_files, key=os.path.getmtime)
 
     return list_of_files
 
